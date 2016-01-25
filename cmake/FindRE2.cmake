@@ -27,6 +27,7 @@
 #  ====================================================================
 
 find_path(RE2_INCLUDE_DIR re2/re2.h NO_DEFAULT_PATH PATHS
+  ${SERVED_INCLUDE_DIR}
   /usr/include
   /opt/local/include
   /usr/local/include
@@ -34,6 +35,7 @@ find_path(RE2_INCLUDE_DIR re2/re2.h NO_DEFAULT_PATH PATHS
 
 set(RE2_NAMES ${RE2_NAMES} re2)
 find_library(RE2_LIBRARY NAMES ${RE2_NAMES} NO_DEFAULT_PATH PATHS
+  ${SERVED_LIB_DIR}
   /usr/local/lib
   /usr/local/re2/lib
   /opt/local/lib
